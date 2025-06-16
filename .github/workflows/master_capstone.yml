@@ -31,7 +31,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: java-app
-          path: build/libs/*.jar   # ✅ Gradle 기준으로 수정됨
+          path: build/libs/*.jar
 
   deploy:
     runs-on: ubuntu-latest
@@ -62,4 +62,4 @@ jobs:
         with:
           app-name: 'capstone'
           slot-name: 'Production'
-          package: 'build/libs/*-SNAPSHOT.jar'
+          package: 'build/libs/spotlight-0.0.1-SNAPSHOT.jar'
