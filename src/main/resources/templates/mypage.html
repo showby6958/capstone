@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>마이페이지</title>
+    <link rel="stylesheet" th:href="@{/header.css}">
+    <link rel="stylesheet" th:href="@{/footer.css}">
+    <link rel="stylesheet" th:href="@{/category.css}">
+    <link rel="stylesheet" th:href="@{/menu.css}">
+    <link rel="stylesheet" th:href="@{/profile.css}">
+    <link rel="stylesheet" th:href="@{/chat.css}">
+    <link rel="stylesheet" th:href="@{/rentProduct.css}">
+    <link rel="stylesheet" th:href="@{/myPage.css}">
+</head>
+<body>
+<!-- 공통 헤더 -->
+<div th:replace="~{main-fragments/header :: header}"></div>
+
+<!-- 공통 카테고리 -->
+<div th:replace="~{main-fragments/category :: category}"></div>
+
+<!-- 마이페이지 본문 -->
+<div class="mypage-body">
+    <!-- 왼쪽 메뉴 -->
+    <div class="menu-wrapper">
+        <div th:replace="~{mypage-fragments/menu :: menu}"></div>
+    </div>
+
+    <!-- 오른쪽 본문 -->
+    <div class="right-section-wrapper">
+        <div class="profile-chat-container">
+            <!-- 프로필 박스 -->
+            <div class="profile-wrapper">
+                <div th:replace="~{mypage-fragments/profile :: profile}"></div>
+            </div>
+            <!-- 채팅 박스 -->
+            <div class="chat-wrapper">
+<!--                <div th:replace="~{mypage-fragments/chat :: chat}"></div>-->
+            </div>
+        </div>
+        <!-- 대여상품 내역 박스 -->
+        <div class="rent-product-wrapper">
+            <div th:replace="~{mypage-fragments/rentProduct :: rentProduct}"></div>
+        </div>
+    </div>
+</div>
+
+<!-- 공통 footer -->
+<div th:replace="~{main-fragments/footer :: footer}"></div>
+
+</body>
+
+</body>
+</html>

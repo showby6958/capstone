@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" th:href="@{/login.css}">
+
+</head>
+<body>
+<div class="login-container">
+    <h1 class="spotlight-logo" onclick="location.href='/'" style="cursor: pointer;">
+        <span class="black">SPOT</span>
+        <span class="light animated">LIGHT</span>
+    </h1>
+
+    <div th:if="${param.error}">
+        <h5>아이디 또는 비밀번호가 틀렸습니다.</h5>
+    </div>
+
+    <div class="login-box">
+        <form action="/login" method="post">
+            <div class="input-wrap">
+                <input type="text" id="username" name="username" placeholder="SPOTLIGHT 아이디" required>
+            </div>
+            <div class="input-wrap password-line">
+                <input type="password" id="password" name="password" placeholder="비밀번호" required>
+            </div>
+<!--            <div class="remember-wrap">-->
+<!--                <input type="checkbox" id="remember" name="remember" />-->
+<!--                <label for="remember">간편로그인 정보 저장</label>-->
+<!--            </div>-->
+            <button type="submit" class="btn login-btn shine-button">로그인</button>
+        </form>
+        <div class="login-links-row">
+            <a href="/signup" class="left-link">회원가입</a>
+            <div class="right-links single-line">
+                <a href="/find-id">아이디 찾기</a>
+                <span class="divider-line"></span>
+                <a href="/find-password">비밀번호 찾기</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

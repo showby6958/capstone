@@ -1,0 +1,161 @@
+/* 전체 페이지 배경 및 기본 글꼴 설정 */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333;
+}
+
+/* 페이지 감싸는 박스 */
+.page-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* 상품 상세 영역 배치 */
+.detail-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 90px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* 좌측 이미지 영역 */
+.detail-left .content-image {
+
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.detail-left img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+/* 우측 상품 정보 영역 */
+.detail-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* 상품명, 가격, 브랜드 */
+.content-info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.content-info p {
+    font-size: 16px;
+    margin: 6px 0;
+}
+
+.badge-inspect {
+    background-color: #007BFF;
+    color: white;
+    font-size: 12px;
+    padding: 5px 13px;
+    border-radius: 9999px;
+    margin-left: 10px;
+}
+
+/* 제품 상태, 거래 방식, 배송비 */
+.detail-meta {
+    display: flex;
+    gap: 20px;
+    font-size: 14px;
+    background-color: #f5f5f5;
+    padding: 12px;
+    margin: 20px 0;
+    border-radius: 8px;
+    line-height: 1.6;
+}
+
+/* 상품 설명 영역 */
+.product-desc h3 {
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+
+.product-desc p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* 주문 버튼 */
+.order-button {
+    background-color: #ffe100;
+    color: #000;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-top: 16px;
+}
+
+.order-button:hover {
+    background-color: #ffcc00;
+}
+
+/* 댓글 영역 */
+.detail-comment {
+    margin-top: 60px;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.content-comment {
+    margin-bottom: 20px;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.content-comment h2 {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 4px 0;
+}
+
+.content-comment p {
+    font-size: 13px;
+    margin: 4px 0;
+}
+
+/* 댓글 입력 폼 */
+.content-writer form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.content-writer input[type="text"],
+.content-writer input[placeholder] {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.content-writer button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.content-writer button:hover {
+    background-color: #357ab8;
+}

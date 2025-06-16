@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div th:fragment="category">
+    <div class="mypage-category">
+        <div class="dropdown-wrapper">
+            <button class="category-button" onclick="toggleCategoryDropdown()">
+                ☰ <span class="highlight">카테고리</span>
+            </button>
+
+            <div id="categoryDropdown" class="expanded-dropdown" style="display: none;">
+                <div class="category-group" th:each="i: ${categories}">
+                    <div class="category-title">
+                        <p>
+                            <a th:href="@{'/category/' + ${i.id}}" th:text="${i.name}">카테고리 이름</a>
+                        </p>
+                    </div>
+<!--                    <ul>-->
+<!--                        <li>정장 (남성/여성)</li>-->
+<!--                        <li>드레스</li>-->
+<!--                        <li>예식용 한복</li>-->
+<!--                    </ul>-->
+                </div>
+<!--                <div class="category-group right-bold">-->
+<!--                    <ul>-->
+<!--                        <li><strong>수입명품</strong></li>-->
+<!--                        <li><strong>패션의류</strong></li>-->
+<!--                        <li><strong>패션잡화</strong></li>-->
+<!--                    </ul>-->
+<!--                </div>-->
+            </div>
+        </div>
+
+        <div class="category-menu">
+            <span>커뮤니티</span>
+            <span>대여 절차 안내</span>
+            <span onclick="location.href='/size-guide'" style="cursor: pointer;">사이즈 가이드</span>
+            <span onclick="location.href='/reviews'" style="cursor: pointer;">후기 모아보기</span>
+        </div>
+    </div>
+
+    <script>
+        function toggleCategoryDropdown() {
+          const dropdown = document.getElementById('categoryDropdown');
+          dropdown.style.display = dropdown.style.display === 'none' ? 'block' : 'none';
+        }
+    </script>
+</div>
+
+</body>
+</html>
